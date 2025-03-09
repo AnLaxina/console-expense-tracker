@@ -1,4 +1,4 @@
-﻿namespace console_expense_tracker;
+﻿namespace console_expense_tracker.Code;
 
 public static class Program
 {
