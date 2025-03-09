@@ -23,12 +23,13 @@ public static class Program
         Console.WriteLine("------------------------------------------------------------");
         Console.Write("Chosen option (enter a number): ");
     }
-
-    private static bool CheckValidInput(string? userInput)
+    
+    // Checks if the userInput is a number and a number between 1 and 5
+    private static bool CheckValidInput(string? userInput, out int number)
     {
-        if (int.TryParse(userInput, out _))
+        if (int.TryParse(userInput, out number))
         {
-            return (int.Parse(userInput) >= 1 && int.Parse(userInput) <= 5);
+            return number is >= 1 and <= 5;
         }
         return false;
     }
@@ -37,15 +38,10 @@ public static class Program
     {
         var userInput = Console.ReadLine();
 
-        while (!CheckValidInput(userInput))
+        while (!CheckValidInput(userInput, out _chosenOption))
         {
             Console.Write("Sorry! Not a valid input! Please choose a number between 1 and 5: ");
             userInput = Console.ReadLine();
-        }
-        
-        if (userInput is not null)
-        {
-            _chosenOption = int.Parse(userInput);
         }
     }
 
