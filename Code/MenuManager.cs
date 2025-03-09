@@ -16,6 +16,12 @@ public static class MenuManager
         Console.Write("Chosen option (enter a number): ");
     }
     
+    // TODO: Implement a feature where a new menu appears for creating an expense
+    internal static void LoadExpenseMenu()
+    {
+        
+    }
+    
     /// <summary>
     ///  This method changes the menu based on what number the user inputs.
     /// </summary>
