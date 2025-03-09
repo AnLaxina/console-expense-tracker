@@ -3,11 +3,17 @@
 public static class Program
 {
     private static int _chosenOption;
+    private static bool _notExited = true;
+    
     private static void Main()
     {
-        ShowMenu();
-        GetInput();
-        ChangeMenu(_chosenOption);
+        while (_notExited)
+        {
+            ShowMenu();
+            GetInput();
+            ChangeMenu(_chosenOption);
+        }
+        Environment.Exit(0);
     }
 
     private static void ShowMenu()
@@ -44,7 +50,12 @@ public static class Program
             userInput = Console.ReadLine();
         }
     }
-
+    
+    /// <summary>
+    ///  This method changes the menu based on what number the user inputs.
+    /// </summary>
+    /// <example>If the user selects 1, the console menu changes to show a menu that creates a new expense</example>
+    /// <param name="chosenOption">Based off the global variable _chosenOption</param>
     private static void ChangeMenu(int chosenOption)
     {
         switch (chosenOption)
@@ -66,7 +77,8 @@ public static class Program
                 Console.WriteLine("You chose 4!");
                 break;
             default:
-                Environment.Exit(0);
+                _notExited = false;
+                Console.WriteLine("You chose 5! Bye bye!");
                 break;
         }
     }
