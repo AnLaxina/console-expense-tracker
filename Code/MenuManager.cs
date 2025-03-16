@@ -17,9 +17,14 @@ public static class MenuManager
     }
     
     // TODO: Implement a feature where a new menu appears for creating an expense
-    internal static void LoadExpenseMenu()
+    internal static void AddExpenseMenu()
     {
-        
+        Console.WriteLine("------------------------------------------------------------");
+        Console.WriteLine("Welcome to the Add Expense Menu! Please type in the following: ");
+        Console.WriteLine("------------------------------------------------------------");
+        Console.WriteLine("Enter the amount: ");
+        var expenseAmount = Convert.ToDecimal(Console.ReadLine());
+        Console.WriteLine($"You entered {expenseAmount}");
     }
     
     /// <summary>
