@@ -11,7 +11,7 @@ public static class Program
         {
             MenuManager.ShowMainMenu();
             GetInput();
-            MenuManager.ChangeMenu(_chosenOption);
+            MenuController.ChangeMenu(_chosenOption);
         }
         Environment.Exit(0);
     }
