@@ -9,7 +9,7 @@ public static class Program
     {
         while (NotExited)
         {
-            MenuManager.ShowMenu();
+            MenuManager.ShowMainMenu();
             GetInput();
             MenuManager.ChangeMenu(_chosenOption);
         }

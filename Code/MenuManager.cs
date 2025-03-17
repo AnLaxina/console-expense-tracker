@@ -2,7 +2,7 @@
 
 public static class MenuManager
 {
-    internal static void ShowMenu()
+    internal static void ShowMainMenu()
     {
         Console.WriteLine("------------------------------------------------------------");
         Console.WriteLine("Welcome to the Expense Tracker! Please type ONE option below: ");
@@ -17,7 +17,7 @@ public static class MenuManager
     }
     
     // TODO: Implement a feature where a new menu appears for creating an expense
-    internal static void AddExpenseMenu()
+    internal static void ShowExpenseMenu()
     {
         Console.WriteLine("------------------------------------------------------------");
         Console.WriteLine("Welcome to the Add Expense Menu! Please type in the following: ");
