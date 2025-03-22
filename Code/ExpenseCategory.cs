@@ -1,6 +1,6 @@
 ﻿namespace console_expense_tracker.Code;
 
-public enum Category
+public enum ExpenseCategory
 {
     // Essential Expenses
     Rent,
