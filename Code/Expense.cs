@@ -1,4 +1,6 @@
-﻿namespace console_expense_tracker.Code;
+﻿using System.ComponentModel;
+
+namespace console_expense_tracker.Code;
 
 public record Expense
 {
@@ -8,4 +10,12 @@ public record Expense
     private decimal _amount;
     private ExpenseCategory _category;
     private DateTime _date;
+
+    public Expense(string description, decimal amount, ExpenseCategory category, DateTime date)
+    {
+        _description = description;
+        _amount = amount;
+        _category = category;
+        _date = date;
+    }
 }
