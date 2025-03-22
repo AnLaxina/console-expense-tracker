@@ -2,6 +2,18 @@
 
 public static class MenuController
 {
+
+    internal static void HandleInput(int chosen)
+    {
+        var userInput = Console.ReadLine();
+
+        switch (chosen)
+        {
+            case 1:
+                Console.WriteLine($"You wrote {Convert.ToDecimal(userInput).ToString("C")}");
+                break;
+        }
+    }
     /// <summary>
     ///  This method changes the menu based on what number the user inputs.
     /// </summary>
@@ -12,8 +24,11 @@ public static class MenuController
         switch (chosenOption)
         {
             case 1:
-                // TODO: Implement adding expense
                 Console.WriteLine("You chose 1!");
+                // Console.Clear();
+                // Console.WriteLine("\x1b[3J");
+                MenuManager.ShowExpenseMenu();
+                HandleInput(chosenOption);
                 break;
             case 2:
                 // TODO: Implement the ability to view expense

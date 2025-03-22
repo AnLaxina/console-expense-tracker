@@ -20,11 +20,8 @@ public static class MenuManager
     internal static void ShowExpenseMenu()
     {
         Console.WriteLine("------------------------------------------------------------");
-        Console.WriteLine("Welcome to the Add Expense Menu! Please type in the following: ");
+        Console.WriteLine("Welcome to the Add Expense Menu! Enter an amount: ");
         Console.WriteLine("------------------------------------------------------------");
-        Console.WriteLine("Enter the amount: ");
-        var expenseAmount = Convert.ToDecimal(Console.ReadLine());
-        Console.WriteLine($"You entered {expenseAmount}");
     }
     
     

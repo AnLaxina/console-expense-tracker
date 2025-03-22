@@ -11,9 +11,10 @@ public static class Program
         {
             MenuManager.ShowMainMenu();
             GetInput();
+            Console.Clear();
             MenuController.ChangeMenu(_chosenOption);
         }
-        Environment.Exit(0);
+        // Environment.Exit(0);
     }
     
     // Checks if the userInput is a number and a number between 1 and 5
