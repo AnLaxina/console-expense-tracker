@@ -7,14 +7,15 @@ public static class Program
     
     private static void Main()
     {
-        while (NotExited)
-        {
-            MenuManager.ShowMainMenu();
-            GetInput();
-            Console.Clear();
-            MenuController.ChangeMenu(_chosenOption);
-        }
+        // while (NotExited)
+        // {
+        //     MenuManager.ShowMainMenu();
+        //     GetInput();
+        //     Console.Clear();
+        //     MenuController.ChangeMenu(_chosenOption);
+        // }
         // Environment.Exit(0);
+        testExpenseService();
     }
     
     // Checks if the userInput is a number and a number between 1 and 5
@@ -36,5 +37,11 @@ public static class Program
             Console.Write("Sorry! Not a valid input! Please choose a number between 1 and 5: ");
             userInput = Console.ReadLine();
         }
+    }
+    
+    // For testing only (WILL DELETE LATER)
+    private static void testExpenseService()
+    {
+        ExpenseService.AddExpense("", 0, ExpenseCategory.Books, DateTime.Today);
     }
 }
