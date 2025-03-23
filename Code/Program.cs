@@ -15,7 +15,7 @@ public static class Program
         //     MenuController.ChangeMenu(_chosenOption);
         // }
         // Environment.Exit(0);
-        testExpenseService();
+        TestExpenseService();
     }
     
     // Checks if the userInput is a number and a number between 1 and 5
@@ -40,7 +40,7 @@ public static class Program
     }
     
     // For testing only (WILL DELETE LATER)
-    private static void testExpenseService()
+    private static void TestExpenseService()
     {
         ExpenseService.AddExpense("", 0, ExpenseCategory.Books, DateTime.Today);
     }
