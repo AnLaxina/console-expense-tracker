@@ -40,4 +40,9 @@ public record Expense
         get => _amount; 
         set => _amount = value;
     }
+
+    public override string ToString()
+    {
+        return $"{Description}: ${Amount} Date Created: {Date}";
+    }
 }
