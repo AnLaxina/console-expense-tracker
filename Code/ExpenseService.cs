@@ -28,4 +28,13 @@ public static class ExpenseService
         return true;
 
     }
+
+    public static void ViewExpenses(int selectedOption)
+    {
+        switch (selectedOption)
+        {
+            // If 1 is entered, it displays all the expense for this particular user by ascending order
+            
+        }
+    }
 }
