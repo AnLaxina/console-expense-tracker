@@ -34,7 +34,22 @@ public static class ExpenseService
         switch (selectedOption)
         {
             // If 1 is entered, it displays all the expense for this particular user by ascending order
+            case 1:
+                var sortedExpenses = OrderExpensesByDate(_expenses);
+                foreach (var expense in sortedExpenses)
+                {
+                }
+
+                break;
             
         }
+    }
+
+    public static List<Expense> OrderExpensesByDate(List<Expense>? listToOrder, bool ascending=true)
+    {
+        if (listToOrder == null) return _expenses;
+        listToOrder.Sort(((expense1, expense2) => DateTime.Compare(expense1.Date, expense2.Date)));
+        return listToOrder;
+
     }
 }

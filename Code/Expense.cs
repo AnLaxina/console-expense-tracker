@@ -18,4 +18,26 @@ public record Expense
         _category = category;
         _date = date;
     }
+    public DateTime Date
+    {
+        get;
+        set;
+    }
+    public string Description
+    {
+        get => _description;
+        set => _description = value ?? throw new ArgumentNullException(nameof(value));
+    }
+
+    public ExpenseCategory Category
+    {
+        get => _category;
+        set => _category = value;
+    }
+
+    public decimal Amount
+    {
+        get => _amount; 
+        set => _amount = value;
+    }
 }
